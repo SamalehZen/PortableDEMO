@@ -1,0 +1,39 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: #0f172a; /* slate-900 */
+  background: #f8fafc; /* slate-50 */
+}
+main { padding: 2rem; }
+.container { max-width: 960px; margin: 0 auto; }
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(2, 6, 23, 0.06);
+  padding: 24px;
+}
+label { font-weight: 600; }
+input[type="range"] { width: 100%; }
+.grid { display: grid; gap: 1rem; }
+@media (min-width: 768px) {
+  .grid-cols-2 { grid-template-columns: 1fr 1fr; }
+}
+
+@keyframes rotale-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotale-tilt {
+  0% { transform: rotateX(0deg) rotateY(0deg) rotate(0deg); }
+  33% { transform: rotateX(15deg) rotateY(15deg) rotate(120deg); }
+  66% { transform: rotateX(-15deg) rotateY(5deg) rotate(240deg); }
+  100% { transform: rotateX(0deg) rotateY(0deg) rotate(360deg); }
+}
+
+@keyframes rotale-pulse {
+  0%, 100% { transform: scale(0.6); opacity: 0.2; }
+  50% { transform: scale(1); opacity: 1; }
+}
